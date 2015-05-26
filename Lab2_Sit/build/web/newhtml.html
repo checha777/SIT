@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<HTML> 
+<HEAD>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <TITLE>Registration form</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FDF5E6">
+
+<FORM ACTION="ShowParameters" METHOD="GET">
+   <table  border="0" cellspacing="5" cellpadding="5">
+
+   <caption>Registration form</caption>
+
+   <tr>
+    <td align="right" valign="top">Name</td>
+    <td><input type="text" name="name" size="25"></td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top">e-mail</td>
+    <td><input type="text" name="e-mail" size="25"></td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top" >Password</td>
+    <td>
+     <input type="password" name="password" size="25">
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top" >reply password</td>
+    <td>
+     <input type="password" name="password2" size="25">
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top" >Sex</td>
+    <td>
+      <input type="radio" name="sex" value="man" checked>
+      men
+      <input type="radio" name="sex" value="woman">
+      woman
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top">Hobbies</td>
+    <td><select name="hobby" size="7" multiple>
+                <option selected value="1">Computers
+                <option value="2">Sport
+                <option value="3">Games
+                <option value="4">Animals
+                <option value="5">Cars
+                <option value="6">Clubs
+                <option value="7">Music
+        </select>
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top">Additional information</td>
+    <td>
+     <textarea cols="30" rows="3" >
+     </textarea>
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" colspan="2">
+     <input type="submit" name="submit" value="send">
+     <input type="reset" name="reset" value="Clear">
+    </td>
+   </tr>
+
+ </table>
+</FORM>
+<br>
+</BODY>
+</HTML>
