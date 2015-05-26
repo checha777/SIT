@@ -1,0 +1,53 @@
+﻿
+html,body{
+	
+    background: url("clouds.jpg");
+    
+}
+
+.table {
+    
+    position: absolute;
+    height: auto;
+    background-color: transparent;
+    left:100px;
+    top:150px;
+    
+
+}
+
+.menu1 {
+    width: 300px;
+    height: 100px;
+    background: rgba(255,255,255,0.5);
+    text-align:center;
+   
+
+}
+.aMenu{
+    
+    font-family: 'Bodoni MT Poster Compressed';
+    font-size: x-large;
+    font-style: italic;
+    
+    color: black;
+
+}
+.bottom {
+    background: rgba(255,255,255,0.5);
+    font-style: italic;
+    font-family: 'Angsana New';
+    font-size: small;
+    text-align: center;
+}
+.mainContent {
+    background: rgba(255,255,255,0.5);
+    width:1000px;
+    
+}
+.dopContent {
+    background: rgba(255,255,255,0.5);
+    width:200px;
+    vertical-align: top;
+   
+}

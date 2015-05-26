@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>web.xml</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: Monospaced}
+table {color: #000000; background-color: #e9e8e2; font-family: Monospaced}
+.xml-attribute {color: #009900}
+.xml-value {color: #ce7b00}
+.ST0 {color: #00007c; font-family: Monospaced; font-weight: bold}
+.xml-tag {color: #0000e6}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Personal\Site\Spring_05\web\WEB-INF\web.xml</td></tr></table>
+<pre>
+<span class="ST0">&lt;?</span><span class="ST0">xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<span class="xml-tag">&lt;web-app</span> <span class="xml-attribute">version</span>=<span class="xml-value">&quot;2.4&quot;</span> <span class="xml-attribute">xmlns</span>=<span class="xml-value">&quot;http://java.sun.com/xml/ns/j2ee&quot;</span> <span class="xml-attribute">xmlns:xsi</span>=<span class="xml-value">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="xml-attribute">xsi:schemaLocation</span>=<span class="xml-value">&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;</span><span class="xml-tag">&gt;</span>
+
+    <span class="xml-tag">&lt;context-param</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;param-name</span><span class="xml-tag">&gt;</span>contextConfigLocation<span class="xml-tag">&lt;/param-name</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;param-value</span><span class="xml-tag">&gt;</span>
+            /WEB-INF/classes/StudentDatabase.xml,
+            /WEB-INF/classes/StudentExample.xml,
+            /WEB-INF/classes/StudentController.xml
+        <span class="xml-tag">&lt;/param-value</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/context-param</span><span class="xml-tag">&gt;</span>
+
+    <span class="xml-tag">&lt;servlet</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;servlet-name</span><span class="xml-tag">&gt;</span>context<span class="xml-tag">&lt;/servlet-name</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;servlet-class</span><span class="xml-tag">&gt;</span>
+            org.springframework.web.context.ContextLoaderServlet
+        <span class="xml-tag">&lt;/servlet-class</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;load-on-startup</span><span class="xml-tag">&gt;</span>1<span class="xml-tag">&lt;/load-on-startup</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/servlet</span><span class="xml-tag">&gt;</span>
+
+    <span class="xml-tag">&lt;servlet</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;servlet-name</span><span class="xml-tag">&gt;</span>applicantServlet<span class="xml-tag">&lt;/servlet-name</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;servlet-class</span><span class="xml-tag">&gt;</span>
+            org.springframework.web.servlet.DispatcherServlet
+        <span class="xml-tag">&lt;/servlet-class</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;init-param</span><span class="xml-tag">&gt;</span>
+            <span class="xml-tag">&lt;param-name</span><span class="xml-tag">&gt;</span>contextConfigLocation<span class="xml-tag">&lt;/param-name</span><span class="xml-tag">&gt;</span>
+            <span class="xml-tag">&lt;param-value</span><span class="xml-tag">/&gt;</span>
+        <span class="xml-tag">&lt;/init-param</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;load-on-startup</span><span class="xml-tag">&gt;</span>2<span class="xml-tag">&lt;/load-on-startup</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/servlet</span><span class="xml-tag">&gt;</span>
+
+    <span class="xml-tag">&lt;servlet-mapping</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;servlet-name</span><span class="xml-tag">&gt;</span>applicantServlet<span class="xml-tag">&lt;/servlet-name</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;url-pattern</span><span class="xml-tag">&gt;</span>*.std<span class="xml-tag">&lt;/url-pattern</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/servlet-mapping</span><span class="xml-tag">&gt;</span>
+    
+    <span class="xml-tag">&lt;session-config</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;session-timeout</span><span class="xml-tag">&gt;</span>30<span class="xml-tag">&lt;/session-timeout</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/session-config</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;welcome-file-list</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;welcome-file</span><span class="xml-tag">&gt;</span>index.jsp<span class="xml-tag">&lt;/welcome-file</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/welcome-file-list</span><span class="xml-tag">&gt;</span>
+
+    <span class="xml-tag">&lt;resource-ref</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;description</span><span class="xml-tag">&gt;</span>DB Connection<span class="xml-tag">&lt;/description</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;res-ref-name</span><span class="xml-tag">&gt;</span>studentDS<span class="xml-tag">&lt;/res-ref-name</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;res-type</span><span class="xml-tag">&gt;</span>javax.sql.DataSource<span class="xml-tag">&lt;/res-type</span><span class="xml-tag">&gt;</span>
+        <span class="xml-tag">&lt;res-auth</span><span class="xml-tag">&gt;</span>Container<span class="xml-tag">&lt;/res-auth</span><span class="xml-tag">&gt;</span>
+    <span class="xml-tag">&lt;/resource-ref</span><span class="xml-tag">&gt;</span>
+
+<span class="xml-tag">&lt;/web-app</span><span class="xml-tag">&gt;</span>
+
+
+</pre></body>
+</html>
